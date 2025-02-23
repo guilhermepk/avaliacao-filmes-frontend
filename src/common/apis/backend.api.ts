@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { LoginRespondeType, LoginPayloadType } from '../types/login-request';
+import { LoginPayloadinterface, LoginRespondeInterface } from '../interfaces/login-request';
+import { RegisterUserPayloadInterface, RegisterUserResponseInterface } from '../interfaces/register-user-requests';
 
 let userToken: string | null = null;
 
@@ -13,12 +14,20 @@ const api = axios.create({
 
 async function post(endpoint: string, payload?: Object): Promise<any> {
     return await api.post(endpoint, payload)
-        .then(response => response.data);
+        .then(response => response.data)
+        .catch(error => {
+            const data = error.response.data
+            window.alert(`${data.statusCode} - ${data.message}`)
+        })
 }
 
-export async function login(nickname: string, password: string): Promise<LoginRespondeType> {
-    console.log(import.meta.env.VITE_BACKEND_URL)
-    const payload: LoginPayloadType = { nickname, password };
+export async function login(nickname: string, password: string): Promise<LoginRespondeInterface> {
+    const payload: LoginPayloadinterface = { nickname, password };
 
     return await post(`auth/login`, payload);
+}
+
+export async function registerUser(name: string, nickname: string, password: string): Promise<RegisterUserResponseInterface> {
+    const payload: RegisterUserPayloadInterface = { name, nickname, password };
+    return await post(`user/register`, payload);
 }

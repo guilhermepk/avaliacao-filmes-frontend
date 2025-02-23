@@ -1,0 +1,11 @@
+.RegisterUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        margin: 1rem;
+        width: fit-content;
+    }
+}
