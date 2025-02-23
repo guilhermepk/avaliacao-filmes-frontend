@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from './RegisterUser.module.scss';
-import { login, registerUser } from "../../common/apis/backend.api";
+import { login, registerUser } from "../../common/apis/backend/backend.api";
 
 const RegisterUser = () => {
     const navigate = useNavigate();

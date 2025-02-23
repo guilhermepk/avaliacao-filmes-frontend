@@ -11,6 +11,14 @@
     h2 {
         margin: 0;
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            color: #3FA8E9;
+            cursor: pointer;
+        }
     }
 
     .list_div {
