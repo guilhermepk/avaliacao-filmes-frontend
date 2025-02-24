@@ -1,0 +1,70 @@
+.CreateList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .search_label {
+        margin-top: 3rem;
+    }
+
+    .content_to_add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .content {
+            margin: 0.5rem;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #121212;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin: 0.5rem;
+            }
+        }
+    }
+
+    .content_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .content {
+            margin: 1rem;
+            background-color: #121212;
+            border-radius: 10px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+            display: flex;
+
+            h3 {
+                margin: 0.5rem;
+            }
+
+            p {
+                margin: 1rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 5; /* Limita o número de linhas para 2 */
+                line-clamp: 5; /* Propriedade padrão para compatibilidade */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis; /* Adiciona "..." no final do texto truncado */
+                height: 100%; /* Garantir que o texto ocupe todo o espaço disponível */
+            }
+
+            .add {
+                margin: 1rem;
+                color: #3FA8E9;
+            }
+        }
+    }
+}

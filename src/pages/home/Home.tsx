@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div>
             <CustomListsSidebar/>
-            <h1> Início </h1>            
+            <h1> Início </h1>  
         </div>
     );
 }
