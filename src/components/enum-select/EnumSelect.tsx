@@ -1,5 +1,3 @@
-import { ChangeEventHandler } from "react";
-
 interface EnumSelectProps {
     enumObject: Object,
     label: string,
