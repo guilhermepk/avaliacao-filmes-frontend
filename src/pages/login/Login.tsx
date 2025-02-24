@@ -19,7 +19,8 @@ const Login = () => {
 
     return (
         <div className={styles.Login}>
-            <h1> Login </h1>
+            <h1> Flash Review </h1>
+            <h2> Login </h2>
                 <label htmlFor="nickname"> Nickname </label>
                 <input type="text" name="nickname" id="nickname" onChange={(e) => setNickname(e.target.value)}/>
 

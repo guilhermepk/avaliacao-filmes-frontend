@@ -12,7 +12,8 @@ const Home = () => {
     return (
         <div>
             <CustomListsSidebar/>
-            <h1> Início </h1> 
+            <h1> Flash Review </h1>
+            <h2> Início </h2> 
 
             <button onClick={logout}> Deslogar </button> 
         </div>

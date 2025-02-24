@@ -7,7 +7,7 @@ type ProtectedRouteProps = {
 
 function ProtectedRoute({ children }: ProtectedRouteProps){
   const userToken = localStorage.getItem('userToken');
-  return userToken ? children : <Navigate to='login'/>
+  return userToken ? children : <Navigate to='/login'/>
 }
 
 export default ProtectedRoute;
